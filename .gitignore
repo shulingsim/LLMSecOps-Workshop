@@ -1,0 +1,102 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# FastAPI / Uvicorn logs
+*.log
+
+# PyInstaller
+*.manifest
+*.spec
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Docker
+*.pid
+*.tar
+Dockerfile~
+docker-compose.override.yml
+__docker_cache__/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Optional cache
+.cache/
+pip-wheel-metadata/
+pip-log.txt
+
+# Ignore uploaded data files and models
+/data/
+*.h5
+*.pkl
+*.joblib
+*.csv
+*.json

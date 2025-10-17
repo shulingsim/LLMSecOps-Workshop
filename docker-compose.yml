@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    image: huggingface-fastapi:latest
+    container_name: hf-fastapi
+    ports:
+      - "4000:8000"          # host:container
+    environment:
+      # Cache models inside the container (override path on Windows if you prefer a host volume)
+      HF_HOME: /root/.cache/huggingface
+      TRANSFORMERS_CACHE: /root/.cache/huggingface
+      PYTHONUNBUFFERED: "1"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/openapi.json"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    # Uncomment if you want to persist model cache on your host for faster cold starts:
+    # volumes:
+    #   - ./hf-cache:/root/.cache/huggingface
